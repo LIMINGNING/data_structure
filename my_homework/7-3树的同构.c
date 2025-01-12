@@ -17,12 +17,12 @@ Tree BuildTree(struct TreeNode T[])
     int check[N];
     char cl;
     char cr;
-    int Root = Null;
+    int Root = Null;  /* if the tree is empty ,Root should be Null = -1 */
     if(N)
     {
         for(i=0;i<N;i++)
         {
-            check[i]=0;
+            check[i]=0;  /* Initialization of check */
         }
         for(i=0;i<N;i++)
         {
@@ -36,7 +36,7 @@ Tree BuildTree(struct TreeNode T[])
             {
                 T[i].Left=Null;
             }
-            if(cr!='-')
+            if(cr!='-')  /* The same operation with left */
             {
                 T[i].Right=cr-'0';
                 check[T[i].Right]=1;
